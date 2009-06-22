@@ -3,10 +3,10 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
 			<property name="hibernate.archive.autodetection" value="class"/>
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/testdb"/>
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:hsql://localhost/"/>
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
 			<property name="hibernate.connection.password" value=""/>
-			<property name="hibernate.connection.username" value="root"/>
+			<property name="hibernate.connection.username" value="sa"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
 		</properties>
