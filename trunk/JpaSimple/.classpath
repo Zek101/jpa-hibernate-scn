@@ -11,5 +11,8 @@
 	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/jta.jar"/>
 	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/slf4j-api.jar"/>
 	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hsqldb/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/test/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/test/log4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
