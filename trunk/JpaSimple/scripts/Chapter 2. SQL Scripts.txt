@@ -1,0 +1,11 @@
+DELETE FROM PRODUCT
+/
+INSERT INTO PRODUCT(ID, NAME, PRICE, PARTNBR, DESCR)
+VALUES(1, 'Shirts', 30, '2343', 'Shirts description')
+/
+INSERT INTO PRODUCT(ID, NAME, PRICE, PARTNBR, DESCR)
+VALUES(2, 'Spoons', 5, '345R', 'Spoons description')
+/
+INSERT INTO PRODUCT(ID, NAME, PRICE, PARTNBR, DESCR)
+VALUES(3, 'Cisors', 10, 'MT56', 'Cisors description')
+/
