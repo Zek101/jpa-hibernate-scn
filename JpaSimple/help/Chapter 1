@@ -1,0 +1,4 @@
+Error: No Persistence provider for EntityManager
+Solution: Add hibernate-entitymanager.jar in classpath, this is not in the Hibernate lib but in the root!
+
+java.lang.NoClassDefFoundError: org/slf4j/impl/StaticLoggerBinder
