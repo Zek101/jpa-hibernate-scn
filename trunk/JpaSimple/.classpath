@@ -2,17 +2,24 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/dom4j.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/ejb3-persistence.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/hibernate-annotations.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/hibernate-commons-annotations.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/hibernate-core.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/javassist.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/jta.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hsqldb/lib/hsqldb.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/hibernate-entitymanager.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/test/slf4j-log4j12.jar"/>
-	<classpathentry kind="lib" path="D:/scoene/Documents/JavaBlackBelt/Hibernate/JavaStuff/hibernate-entitymanager-3.4.0.GA/lib/test/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/asm.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/cglib.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/jta.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="D:/scoene/workspaceFlex/JpaSimple - Startup/lib/spring.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
