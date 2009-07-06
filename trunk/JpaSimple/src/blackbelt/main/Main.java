@@ -4,6 +4,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import dto.Product;
+import dto.User;
+import dto.UserPK;
+
 
 
 public class Main {
@@ -12,22 +15,21 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Start main");
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");
 		EntityManager em = emf.createEntityManager();
 		
-		System.out.println("Entity manager created");
 		
 		em.getTransaction().begin();
-		Product p = new Product("Boots", 39.90, "XZ3JS", "Yellow boots");
+		Product p = new Product("Boot", 39.90, "XZ3JS", "Yellow boots");
 		
-		System.out.println("product created");
+		User u = new User();
+		u.setId(new UserPK("Stijn", "Coene"));
+		u.setEmail("stijn.coene@capgemini.com");
 		
 		em.persist(p);
+		em.persist(u);
 		
 		em.getTransaction().commit();
-		
-		System.out.println("Product committed to db");
 		
 		em.close();
 		emf.close();
