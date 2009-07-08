@@ -26,10 +26,10 @@ public class TestLifecycle {
 		 * 
 		 * 			| New		| Managed	| Detached	| Removed	|
 		 * ----------------------------------------------------------
-		 * persist	|OK			|IGN		|EXP		|EXP		|
-		 * remove	|OK			|OK			|EXP		|IGN		|
-		 * refresh	|EXP		|OK			|EXP		|EXP		|
-		 * contains	|FALSE		|TRUE		|			|FALSE		|
+		 * persist	|OK			|IGN		|EX			|EX			|
+		 * remove	|OK			|OK			|EX			|IGN		|
+		 * refresh	|EX			|OK			|EX			|EX			|
+		 * contains	|FALSE		|TRUE		|FALSE		|FALSE		|
 		 */
 		
 		
@@ -73,6 +73,10 @@ public class TestLifecycle {
 			em.refresh(p);
 		}catch(Exception e){System.out.println(e.getMessage());}
 		//contains - removed
+		System.out.println(em.contains(p));
+		
+		em.close();
+		em = emf.createEntityManager();
 		System.out.println(em.contains(p));
 		
 
