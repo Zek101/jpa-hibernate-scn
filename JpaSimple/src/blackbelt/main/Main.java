@@ -71,9 +71,21 @@ public class Main {
 		System.out.println("Person " + per.getFirstName() + " " + per.getLastName() + " has a car with license plate XSD-456'");
 		
 		//3. Try to execute a (wrong) query that uses an implicit join in the wrong direction. Find the houses, which have a resident having “John” as first name, with a where clause like: house.residents.firstName = “John”. Identify the error message you get from Hibernate.
-		House house = (House)em.createQuery("SELECT h FROM House h WHERE h.persons.firstName = 'Stijn'")
+		House house = (House)em.createQuery("SELECT h FROM House h JOIN h.persons p WHERE p.firstName = 'Stijn'")
 			.getSingleResult();
-		//-->illegal attempt to dereference collection
+		System.out.println("House " + house.getLocation() + " Has a residence named Stijn");
+		
+		//4. Write a query that gets the last names of people who have a brown dog.
+		List<String> perLastNames= em.createQuery("SELECT p.lastName FROM Person p JOIN p.dogs d WHERE d.color = 'Brown'").getResultList();
+		for(String ln : perLastNames){
+			System.out.println("Last name: " + ln);
+		}
+		
+		//5. Count the number of supporters a particular team has.
+		//--> there is no supporters / team table in this setup.
+		//--> executed query: count the number of persons with a particular first name
+		Long num = (Long)em.createQuery("SELECT count(p) FROM Person p  WHERE p.firstName = 'Stijn'").getSingleResult();
+		System.out.println("Number of persons with first name Stijn is: " + num);
 		
 		em.close();
 		emf.close();
