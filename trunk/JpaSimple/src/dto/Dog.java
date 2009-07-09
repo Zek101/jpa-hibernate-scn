@@ -15,7 +15,7 @@ public class Dog {
 		super();
 	}
 	
-	public Dog(String color, String name) {
+	public Dog(String name, String color) {
 		super();
 		this.color = color;
 		this.name = name;
