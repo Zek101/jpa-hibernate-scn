@@ -1,9 +1,11 @@
 package blackbelt.domain;
 
-import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+
+import sun.security.action.GetBooleanAction;
 
 @Entity
 public class Product {
@@ -13,7 +15,7 @@ public class Product {
 	private Double price;
 	
 	@ManyToOne
-	@Basic(optional=false)
+	//@Column(nullable=false)
 	private Category category;
 	
 	@ManyToOne
@@ -69,6 +71,19 @@ public class Product {
 
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
+	}
+	
+	public String toString(){
+		Category current = getCategory();
+		String categoryList = "";
+		while(current != null){
+			categoryList += "-->" + current.getName();
+			current = current.getCategoryParent();
+		}
+		
+		return "Barcode: " + barCountry.barcode +
+		       "\ncountry: " + barCountry.country +
+		       "\ncategory: " + categoryList;
 	}
 	
 	
