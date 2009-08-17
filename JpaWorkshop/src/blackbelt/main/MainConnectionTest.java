@@ -81,7 +81,7 @@ public class MainConnectionTest {
 		Product WindowsVista = new Product(new ProductPK("666582", "US"), Double.valueOf(2.95),Software, Microsoft );
 		Product Wired        = new Product(new ProductPK("098701", "US"), Double.valueOf(4.95),Magazines, CondeNast );
 		Product Humo		 = new Product(new ProductPK("234701", "Belgium"), Double.valueOf(3.70),Magazines, CondeNast );
-		Product PlayBoy      = new Product(new ProductPK("777777", "US"), Double.valueOf(5.70),Magazines, Microsoft );
+		Product PlayBoy      = new Product(new ProductPK("777777", "US"), Double.valueOf(5.70),Sexy, Microsoft );
 		
 		em.persist(MacBook);
 		em.persist(WindowsVista);
@@ -233,6 +233,32 @@ public class MainConnectionTest {
 		System.out.println("Get Users who aving product 777777, US");
 		for(User u : users){
 			System.out.println(u.getName());
+		}
+		
+		///////////////////////////////
+		// EX.7 
+		///////////////////////////////
+		String category = "Sexy";  //set category to null to order by name
+		String queryString = "select u" +
+		"  from ShoppingBasket sb" +
+		"  join sb.product p" +
+		"  join sb.user u" +
+		" where p.barCountry.barcode = :barcode " +
+		"   and p.barCountry.country = :country ";
+		
+		if(category != null)
+			queryString += " and p.category.name = '"+category+"'" +
+						   " order by u.birthDate";
+		else
+			queryString += " order by u.name";
+					
+		List<User> usersCat = (List<User>)em.createQuery(	queryString)
+				.setParameter("barcode", "777777")
+				.setParameter("country", "US")
+				.getResultList();
+				System.out.println("Get Users who aving product 777777, US for a given category");
+		for(User u : usersCat){
+			System.out.println(u.getName() );
 		}
 	}	
 }
