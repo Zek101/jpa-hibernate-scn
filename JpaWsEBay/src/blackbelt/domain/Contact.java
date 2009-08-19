@@ -21,7 +21,7 @@ public class Contact {
 	private String lastName;
 	private String email;
 	
-	@OneToMany
+	@OneToMany(mappedBy="seller")
 	private Set<EBayItem> eBayItems = new HashSet<EBayItem>();
 	
 	@OneToMany
@@ -121,6 +121,19 @@ public class Contact {
 		for(int i = 0; i < item.length; i++){
 			eBayItems.add(item[i]);
 		}
+	}
+	
+	public void addPaymentMethod(PaymentMethod ... pm){
+		for(int i = 0; i < pm.length; i++){
+			paymentMethods.add(pm[i]);
+		}
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return this.getFirstName() + " " + this.getLastName();
 	}
 	
 	

@@ -26,10 +26,10 @@ public class EBayDao {
 		shippingStijn.setRemarks("This will be my shipping address");
 		
 		Address billingStijn = new Address();
-		billingStijn.setCity("Brussels");
-		billingStijn.setCountry("Belgium");
-		billingStijn.setStreet("Bessenveldstraat 18");
-		billingStijn.setZipcode("1891");
+		billingStijn.setCity("Las Vegas"); //to test the before last query, replace with San Fransisco
+		billingStijn.setCountry("USA");
+		billingStijn.setStreet("Avenue 54");
+		billingStijn.setZipcode("90210");
 		billingStijn.setRemarks("This is stijn's billing address");
 		
 		EBayItem shirt = new EBayItem();
@@ -48,6 +48,8 @@ public class EBayDao {
 		stijn.setGender("M");
 		stijn.setSaluation("Mr.");
 		stijn.addEBayItems(shirt);
+		
+		shirt.setSeller(stijn);
 		
 		em.persist(shippingStijn);
 		em.persist(billingStijn);

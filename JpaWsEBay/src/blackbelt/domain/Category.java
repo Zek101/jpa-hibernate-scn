@@ -27,6 +27,13 @@ public class Category {
 	public Category() {
 	
 	}
+	
+
+	public Category(String title) {
+		super();
+		this.title = title;
+	}
+
 
 	public String getTitle() {
 		return title;
@@ -60,5 +67,14 @@ public class Category {
 		this.children = children;
 	}
 	
+	public void addChildren(Category ... category){
+		for(int i = 0; i<category.length; i++){
+			children.add(category[i]);
+		}
+	}
 	
+	@Override
+	public String toString() {
+		return this.getTitle();
+	}
 }

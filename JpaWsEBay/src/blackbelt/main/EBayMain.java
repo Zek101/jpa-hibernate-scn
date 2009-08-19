@@ -15,7 +15,16 @@ public class EBayMain {
 		TestQueries tq = (TestQueries)applicationContext.getBean("testQueries");
 		tq.loadSampleData();
 		
+		//test contact
 		tq.testContactDAO();
 		
+		//test item
+		tq.testEBayItemDAO();
+		
+		//test category
+		tq.testCategoryDAO();
+		
+		//test queries
+		tq.testQueries();
 	}
 }
