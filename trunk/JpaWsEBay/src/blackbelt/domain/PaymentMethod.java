@@ -10,7 +10,7 @@ public class PaymentMethod {
 	private Long id;
 	
 	
-	public enum cardTypes{CC, PP, CA}
+	public static enum cardTypes{CC, PP, CA}
 	private cardTypes cardType;
 	private String details;
 	
@@ -28,5 +28,7 @@ public class PaymentMethod {
 	public void setDetails(String details) {
 		this.details = details;
 	}
+	
+	
 	
 }

@@ -102,5 +102,8 @@ public class EBayItem {
 		this.category = category;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return getTitle() + " " + getPriceAsked() + " / " + getPricePaid(); 
+	}
 }

@@ -1,5 +1,7 @@
 package blackbelt.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import blackbelt.domain.Contact;
+import blackbelt.domain.EBayItem;
 
 @Component
 @Transactional
@@ -30,7 +33,14 @@ public class ContactDAO {
 	}
 	
 	public void deleteContact(Contact contact){
-		//Contact foundContact = em.find(Contact.class, contact);
 		em.remove(contact);
+	}
+	
+	public List<Contact> getContactsWithCredidCard(){
+		return (List<Contact>)em.createQuery("select c " +
+				                              "  from Contact c" +
+				                              "  join c.paymentMethods p" +
+				                              " where p.cardType = 'cc'")
+				.getResultList();
 	}
 }
