@@ -1,0 +1,1 @@
+JPA Hibernate training - Exercise material
